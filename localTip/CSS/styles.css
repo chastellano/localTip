@@ -1,0 +1,102 @@
+body {
+    background-image: linear-gradient(to right, #c2c0c0, #e9e8e3, #c2c0c0);
+    /* background-color: rgb(233, 212, 212); */
+}
+
+.shadow {
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+}
+
+.banner-color {
+    color: rgb(209, 158, 92);
+}
+
+.banner-color-bg {
+    background-color: rgb(209, 158, 92);
+}
+
+.jumbotron {
+    background-image: url(/img/grass.jpg);
+    background-size: 800px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Molle', cursive;
+}
+
+/*
+.container {
+    border: solid 1px black;
+}
+
+.row {
+    border: solid 2px rgb(168, 29, 29);
+}
+
+.col {
+    border: solid 2px rgb(62, 167, 228);
+}
+*/
+
+.listing {
+    border: 2px hidden rgb(117, 115, 115);
+    border-style: outset dotted outset dotted;
+    background-color: rgb(231, 248, 252);
+    box-shadow:
+    0 0 0 1px hsl(0, 0%, 80%),
+    0 0 0 1px hsl(0, 0%, 90%);
+}
+
+#icon {
+    /* border: 1px solid white; */
+}
+
+#icon:hover, .banner:hover {
+    text-decoration: none;
+    color: rgb(209, 158, 92);
+}
+
+div.when {
+    border-right: 1px dashed rgb(207, 204, 204);
+    font-family: 'Fira Code', monospace;
+}
+
+.tixbutts {
+    /* border-left: 1px dashed rgb(187, 182, 182); */
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.site-footer {
+    margin-top: 20px;
+    background-color: #292b2c;
+}
+
+.share {
+    align-content: center;
+}
+
+#searchTabs {
+    border-bottom: 0px;
+}
+
+#searchTabs a {
+    font-size: small;
+    font-weight: bold;
+}
+
+#searchTabs a.active {
+    background-color: rgb(231, 248, 252);
+    border: none;
+    color: black;
+}
+
+#searchTabs a {
+    color: white;
+}
+

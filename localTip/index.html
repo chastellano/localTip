@@ -20,18 +20,36 @@
         <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     
         <title>Local Tip</title>
     </head>
     <body>
-        <header class="jumbotron jumbotron-fluid mb-0">
+        <header class="jumbotron jumbotron-fluid mb-0 py-4 py-md-5">
             <div class="container">
                 <div class="row">
-                    <div class="col">
-                        <!-- <img src="img/grass.jpg" width='100%'> -->
-                        <a class="shadow banner-color" href="#"><h1>LocalTip</h1></a>
+                    <div class="col align-self-center text-md-left mb-2 mb-md-0 text-center">
+                        <a class="banner-color shad" href="#"><h1>LocalTip</h1></a>
                     </div>
-                </div>
+                    <div class="col-9 col-md-6 col-lg-4 ml-sm-auto mx-auto">
+                        <div class="card subscribe-card">
+                            <div class="card-header p-2 bg-secondary">
+                                <p class="text-center text-white mx-auto m-0 p-0">Subscribe to our newsletter!</p>
+                            </div>
+                            <div class="card-body pb-1 bg-dark">
+                                <form>
+                                    <div class="form-row subscribe">
+                                        <div class="col-12 form-group form-check-inline mx-auto">
+                                            <label class="sr-only" for="newsletter">Subscribe</label>
+                                            <textarea type="email" class="form-control-sm w-100 sub" wrap="off" id="newsletter" placeholder="Enter email..."></textarea>
+                                            <button type="button" class="btn btn-sm btn-primary text-nowrap sub">Sign-up</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>   
+                        </div>
+                    </div>
+                
             </div>
         </header>
 
@@ -47,27 +65,69 @@
                     <ul class="navbar-nav ml-3">
                         <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="contactus.html" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+        <div class="modal fade" id="shareModal" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content mt-5">
+                    <div class="modal-header bg-light">
+                        <h4 class="modal-title ml-3">Share</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body pt-4">
+                        <div class="d-flex justify-content-around text-center">
+                            <div>
+                                <a href="#" class="btn btn-lg btn-social-icon btn-twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <p>Twitter</p>
+                            </div>
+                            <div><a href="#" class="btn btn-lg btn-social-icon btn-facebook"><i class="fab fa-facebook"></i></a>
+                                <p>Facebook</p>
+                            </div>
+                            <div><a href="#" class="btn btn-lg btn-social-icon btn-reddit"><i class=" fab fa-reddit"></i></a>
+                                <p>Reddit</p>
+                            </div>
+                            <div><a href="#" class="btn btn-lg btn-social-icon btn-instagram"><i class="fab fa-instagram"></i></a>
+                                <p>Instagram</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <div class="container">
+                            <label>Page Link</label>
+                            <p class="text-danger text-small ml-2" id="copied"><small>Copied!</small></p>
+                            <div class="row">
+                                <div class="col-10 input-group">
+                                    <input type="url" class="form-control clone" readonly placeholder="http://www.localtip.com/show/23425443"> 
+                                    <button class="clone"><i class="far fa-clone"></i></button>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container-fluid mt-4">
             <div class="row">
-                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto px-0">
+                <div class="col-sm-10 col-md-8 col-lg-7 col-xl-6 mx-auto px-0">
                     <div class="card px-0">
                         <div class="card-header pb-0 bg-secondary">
                             <div class="row">
                                 <div class="col mx-auto">
-                                    <h2 class="shadow text-center banner-color">Shows</h2>
+                                    <h2 class="text-center text-white shows-font">S H O W S</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body pb-0 bg-dark">
                             <form>
                                 <div class="form-row">
-                                    <div class="col form-group form-check-inline mx-auto p-0">
+                                    <div class="col form-group form-check-inline mx-auto p-0 searchbar">
                                         <label class="sr-only" for="showSearch">Search</label>
                                         <input type="search" class="form-control" id="showSearch" placeholder="Find shows...">
                                         <button type="button" class="btn btn-primary">GO</button>
@@ -85,7 +145,7 @@
                                             <a href="" class="nav-link">HOT</a>
                                         </li>
                                         <li class="col text-nowrap nav-item">
-                                            <a href="" class="nav-link">JUST ANNOUNCED</a>
+                                            <a href="" class="nav-link announced">JUST ANNOUNCED</a>
                                         </li>
                                         <li class="col text-nowrap nav-item">
                                             <a href="" class="nav-link">FREE</a>
@@ -98,212 +158,262 @@
                 </div>
             </div>
             <div class="row">
-                <div class="listing col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto mb-1">
+                <div class="listing col-sm-10 col-md-8 col-lg-7 col-xl-6 mx-auto mb-1">
                     <div class="row align-items-center">
-                        <div class="col-1">
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-calendar-plus text-success"></i>
-                            </a>
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-share-alt-square text-danger"></i>
-                            </a>
-                        </div>
-                        <div class="col-2 when">
-                            <div class="pt-3"><p><small>Wed<br>Jan 20<br>8:00pm</small></p></div>
-                        </div>
-                        <div class="col-3"><p>Artist Name</p></div>
-                        <div class="col-3"><p><small>VENUE NAME<br>City, State</small></p></div>
-                        <div class="col-3 tixbutts">
-                            <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
-                            <a href="#" class="btn btn-sm btn-secondary w-100"><small>More Info</small></a>
+                        <div class="col-2 pl-sm-3 pl-xl-4 py-3">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="when">
+                                        <div><p><small>Mon<br>Jan 4<br>8:00pm</small></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#">
+                                        <i class="fas fa-lg fa-calendar-plus text-success"></i>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#shareModal">
+                                        <i class="fas fa-lg fa-share-alt-square text-danger"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="col-7">      
+                            <div class="row align-items-center py-3">
+                                <div class="col-sm-7 who px-sm-1"><p><small>The Mountain Goats</small></p></div>
+                                <div class="col-sm-5 pl-sm-3 pr-3">
+                                    <p class="mb-2 venue"><small>City Winery</small></p>
+                                    <p class="xtra-info"><small>$20</small></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col">
+                            <div class="row">
+                                <div class="col tix-butts">
+                                    <a href="#" class="btn btn-sm btn-primary w-100 mb-2 disabled px-1"><small>SOLD OUT</small></a>
+                                    <a href="#" class="btn btn-sm btn-secondary w-100"><small>Info</small></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="listing col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto mb-1">
+                <div class="listing col-sm-10 col-md-8 col-lg-7 col-xl-6 mx-auto mb-1">
                     <div class="row align-items-center">
-                        <div class="col-1">
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-calendar-plus text-success"></i>
-                            </a>
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-share-alt-square text-danger"></i>
-                            </a>
-                        </div>
-                        <div class="col-2 when">
-                            <div class="pt-3"><p><small>Wed<br>Jan 20<br>8:00pm</small></p></div>
-                        </div>
-                        <div class="col-3"><p>Artist Name</p></div>
-                        <div class="col-3"><p><small>VENUE NAME<br>City, State</small></p></div>
-                        <div class="col-3 tixbutts">
-                            <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
-                            <a href="#" class="btn btn-sm btn-secondary w-100"><small>More Info</small></a>
+                        <div class="col-2 pl-sm-3 pl-xl-4 py-3">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="when">
+                                        <div><p><small>Mon<br>Jan 4<br>9:00pm</small></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#">
+                                        <i class="fas fa-lg fa-calendar-plus text-success"></i>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#shareModal">
+                                        <i class="fas fa-lg fa-share-alt-square text-danger"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="col-7">      
+                            <div class="row align-items-center py-3">
+                                <div class="col-sm-7 who px-sm-1"><p><small>Phantom Planet (playing live from LA's Lodge Room)</small></p></div>
+                                <div class="col-sm-5 pl-sm-3 pr-3">
+                                    <p class="mb-2 venue"><small>Veeps</small></p>
+                                    <p class="xtra-info"><small>LIVESTREAM<br>All ages</small></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col">
+                            <div class="row">
+                                <div class="col tix-butts">
+                                    <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
+                                    <a href="#" class="btn btn-sm btn-secondary w-100"><small>Info</small></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row">
-                <div class="listing col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto mb-1">
+                <div class="listing col-sm-10 col-md-8 col-lg-7 col-xl-6 mx-auto mb-1">
                     <div class="row align-items-center">
-                        <div class="col-1">
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-calendar-plus text-success"></i>
-                            </a>
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-share-alt-square text-danger"></i>
-                            </a>
-                        </div>
-                        <div class="col-2 when">
-                            <div class="pt-3"><p><small>Wed<br>Jan 20<br>8:00pm</small></p></div>
-                        </div>
-                        <div class="col-3"><p>Artist Name</p></div>
-                        <div class="col-3"><p><small>VENUE NAME<br>City, State</small></p></div>
-                        <div class="col-3 tixbutts">
-                            <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
-                            <a href="#" class="btn btn-sm btn-secondary w-100"><small>More Info</small></a>
+                        <div class="col-2 pl-sm-3 pl-xl-4 py-3">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="when">
+                                        <div><p><small>Mon<br>Jan 4<br>8:00pm</small></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#">
+                                        <i class="fas fa-lg fa-calendar-plus text-success"></i>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#shareModal">
+                                        <i class="fas fa-lg fa-share-alt-square text-danger"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="col-7">      
+                            <div class="row align-items-center py-3">
+                                <div class="col-sm-7 who px-sm-1"><p><small>Ash Koosha, Yona</small></p></div>
+                                <div class="col-sm-5 pl-sm-3 pr-3">
+                                    <p class="mb-2 venue"><small>National Sawdust</small></p>
+                                    <p class="xtra-info"><small>LIVESTREAM - FERUS Festival<br>All ages</small></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col">
+                            <div class="row">
+                                <div class="col tix-butts">
+                                    <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
+                                    <a href="#" class="btn btn-sm btn-secondary w-100"><small>Info</small></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row">
-                <div class="listing col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto mb-1">
+                <div class="listing col-sm-10 col-md-8 col-lg-7 col-xl-6 mx-auto mb-1">
                     <div class="row align-items-center">
-                        <div class="col-1">
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-calendar-plus text-success"></i>
-                            </a>
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-share-alt-square text-danger"></i>
-                            </a>
-                        </div>
-                        <div class="col-2 when">
-                            <div class="pt-3"><p><small>Wed<br>Jan 20<br>8:00pm</small></p></div>
-                        </div>
-                        <div class="col-3"><p>Artist Name</p></div>
-                        <div class="col-3"><p><small>VENUE NAME<br>City, State</small></p></div>
-                        <div class="col-3 tixbutts">
-                            <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
-                            <a href="#" class="btn btn-sm btn-secondary w-100"><small>More Info</small></a>
+                        <div class="col-2 pl-sm-3 pl-xl-4 py-3">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="when">
+                                        <div><p><small>Mon<br>Jan 4<br>6:00pm</small></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#">
+                                        <i class="fas fa-lg fa-calendar-plus text-success"></i>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#shareModal">
+                                        <i class="fas fa-lg fa-share-alt-square text-danger"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="col-7">      
+                            <div class="row align-items-center py-3">
+                                <div class="col-sm-7 who px-sm-1"><p><small>Kinlaw</small></p></div>
+                                <div class="col-sm-5 pl-sm-3 pr-3">
+                                    <p class="mb-2 venue"><small>Instagram</small></p>
+                                    <p class="xtra-info"><small>LIVESTREAM - Rough Trade NYC<br>All ages</small></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col">
+                            <div class="row">
+                                <div class="col tix-butts">
+                                    <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
+                                    <a href="#" class="btn btn-sm btn-secondary w-100"><small>Info</small></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row">
-                <div class="listing col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto mb-1">
+                <div class="listing col-sm-10 col-md-8 col-lg-7 col-xl-6 mx-auto mb-1">
                     <div class="row align-items-center">
-                        <div class="col-1">
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-calendar-plus text-success"></i>
-                            </a>
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-share-alt-square text-danger"></i>
-                            </a>
-                        </div>
-                        <div class="col-2 when">
-                            <div class="pt-3"><p><small>Wed<br>Jan 20<br>8:00pm</small></p></div>
-                        </div>
-                        <div class="col-3"><p>Artist Name</p></div>
-                        <div class="col-3"><p><small>VENUE NAME<br>City, State</small></p></div>
-                        <div class="col-3 tixbutts">
-                            <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
-                            <a href="#" class="btn btn-sm btn-secondary w-100"><small>More Info</small></a>
+                        <div class="col-2 pl-sm-3 pl-xl-4 py-3">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="when">
+                                        <div><p><small>Mon<br>Jan 4<br>9:00pm</small></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#">
+                                        <i class="fas fa-lg fa-calendar-plus text-success"></i>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#shareModal">
+                                        <i class="fas fa-lg fa-share-alt-square text-danger"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="col-7">      
+                            <div class="row align-items-center py-3">
+                                <div class="col-sm-7 who px-sm-1"><p><small>Sunflower Bean</small></p></div>
+                                <div class="col-sm-5 pl-sm-3 pr-3">
+                                    <p class="mb-2 venue"><small>LPR.tv</small></p>
+                                    <p class="xtra-info"><small>LIVESTREAM</small></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col">
+                            <div class="row">
+                                <div class="col tix-butts">
+                                    <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
+                                    <a href="#" class="btn btn-sm btn-secondary w-100"><small>Info</small></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row">
-                <div class="listing col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto mb-1">
+                <div class="listing col-sm-10 col-md-8 col-lg-7 col-xl-6 mx-auto mb-1">
                     <div class="row align-items-center">
-                        <div class="col-1">
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-calendar-plus text-success"></i>
-                            </a>
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-share-alt-square text-danger"></i>
-                            </a>
-                        </div>
-                        <div class="col-2 when">
-                            <div class="pt-3"><p><small>Wed<br>Jan 20<br>8:00pm</small></p></div>
-                        </div>
-                        <div class="col-3"><p>Artist Name</p></div>
-                        <div class="col-3"><p><small>VENUE NAME<br>City, State</small></p></div>
-                        <div class="col-3 tixbutts">
-                            <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
-                            <a href="#" class="btn btn-sm btn-secondary w-100"><small>More Info</small></a>
+                        <div class="col-2 pl-sm-3 pl-xl-4 py-3">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="when">
+                                        <div><p><small>Fri<br>Jan 8<br>9:00pm</small></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#">
+                                        <i class="fas fa-lg fa-calendar-plus text-success"></i>
+                                    </a>
+                                    <a href="#" data-toggle="modal" data-target="#shareModal">
+                                        <i class="fas fa-lg fa-share-alt-square text-danger"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="col-7">      
+                            <div class="row align-items-center py-3">
+                                <div class="col-sm-7 who px-sm-1"><p><small>David Bowie Alumni, Anna Calvi, Andra Day, Duran Duran, Perry Farrell, Macy Gray, Dave Navarro, Gary Oldman, Trent Reznor, Gavin Rossdale, Yungblud, and more!</small></p></div>
+                                <div class="col-sm-5 pl-sm-3 pr-3">
+                                    <p class="mb-2 venue"><small>Rolling Live Studios</small></p>
+                                    <p class="xtra-info"><small>LIVESTREAM - A Bowie Celebration<br>All ages</small></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col">
+                            <div class="row">
+                                <div class="col tix-butts">
+                                    <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
+                                    <a href="#" class="btn btn-sm btn-secondary w-100"><small>Info</small></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="listing col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto mb-1">
-                    <div class="row align-items-center">
-                        <div class="col-1">
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-calendar-plus text-success"></i>
-                            </a>
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-share-alt-square text-danger"></i>
-                            </a>
-                        </div>
-                        <div class="col-2 when">
-                            <div class="pt-3"><p><small>Wed<br>Jan 20<br>8:00pm</small></p></div>
-                        </div>
-                        <div class="col-3"><p>Artist Name</p></div>
-                        <div class="col-3"><p><small>VENUE NAME<br>City, State</small></p></div>
-                        <div class="col-3 tixbutts">
-                            <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
-                            <a href="#" class="btn btn-sm btn-secondary w-100"><small>More Info</small></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="listing col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto mb-1">
-                    <div class="row align-items-center">
-                        <div class="col-1">
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-calendar-plus text-success"></i>
-                            </a>
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-share-alt-square text-danger"></i>
-                            </a>
-                        </div>
-                        <div class="col-2 when">
-                            <div class="pt-3"><p><small>Wed<br>Jan 20<br>8:00pm</small></p></div>
-                        </div>
-                        <div class="col-3"><p>Artist Name</p></div>
-                        <div class="col-3"><p><small>VENUE NAME<br>City, State</small></p></div>
-                        <div class="col-3 tixbutts">
-                            <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
-                            <a href="#" class="btn btn-sm btn-secondary w-100"><small>More Info</small></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="listing col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto mb-1">
-                    <div class="row align-items-center">
-                        <div class="col-1">
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-calendar-plus text-success"></i>
-                            </a>
-                            <a class="d-block my-2" href="#">
-                                <i class="fas fa-lg fa-share-alt-square text-danger"></i>
-                            </a>
-                        </div>
-                        <div class="col-2 when">
-                            <div class="pt-3"><p><small>Wed<br>Jan 20<br>8:00pm</small></p></div>
-                        </div>
-                        <div class="col-3"><p>Artist Name</p></div>
-                        <div class="col-3"><p><small>VENUE NAME<br>City, State</small></p></div>
-                        <div class="col-3 tixbutts">
-                            <a href="#" class="btn btn-sm btn-primary w-100 mb-2"><small>Tickets</small></a>
-                            <a href="#" class="btn btn-sm btn-secondary w-100"><small>More Info</small></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
             <footer class="site-footer">
                 <div class="container text-white p-5">
@@ -332,5 +442,6 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>

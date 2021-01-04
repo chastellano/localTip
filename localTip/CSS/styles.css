@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to right, #c2c0c0, #e9e8e3, #c2c0c0);
+    background-image: linear-gradient(to right, #dfdfdf, #f8f8f8, #dfdfdf);
     /* background-color: rgb(233, 212, 212); */
 }
 
@@ -8,7 +8,7 @@ body {
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 }
 
 .banner-color {
@@ -24,28 +24,18 @@ body {
     background-size: 800px;
 }
 
-h1, h2, h3, h4 {
+.shows-font {
+    font-family: 'Fira Code', monospace;
+}
+
+h1, h3, h4 {
     font-family: 'Molle', cursive;
 }
-
-/*
-.container {
-    border: solid 1px black;
-}
-
-.row {
-    border: solid 2px rgb(168, 29, 29);
-}
-
-.col {
-    border: solid 2px rgb(62, 167, 228);
-}
-*/
 
 .listing {
     border: 2px hidden rgb(117, 115, 115);
     border-style: outset dotted outset dotted;
-    background-color: rgb(231, 248, 252);
+    background-color: rgb(230, 242, 245);
     box-shadow:
     0 0 0 1px hsl(0, 0%, 80%),
     0 0 0 1px hsl(0, 0%, 90%);
@@ -55,18 +45,26 @@ h1, h2, h3, h4 {
     /* border: 1px solid white; */
 }
 
-#icon:hover, .banner:hover {
+#icon:hover, .banner-color:hover {
     text-decoration: none;
     color: rgb(209, 158, 92);
 }
 
-div.when {
-    border-right: 1px dashed rgb(207, 204, 204);
+.when {
     font-family: 'Fira Code', monospace;
+    line-height: 1.1em;
+    font-size: .9em;
 }
 
-.tixbutts {
-    /* border-left: 1px dashed rgb(187, 182, 182); */
+.when-border {
+    border-right: 1px dashed rgb(207, 204, 204);
+}
+
+.who-border {
+    border-left: 1px dashed rgb(207, 204, 204);
+}
+
+.tix-butts {
     height: 100%;
     margin-top: 0;
     margin-bottom: 0;
@@ -75,10 +73,6 @@ div.when {
 .site-footer {
     margin-top: 20px;
     background-color: #292b2c;
-}
-
-.share {
-    align-content: center;
 }
 
 #searchTabs {
@@ -91,12 +85,78 @@ div.when {
 }
 
 #searchTabs a.active {
-    background-color: rgb(231, 248, 252);
+    background-color: rgb(230, 242, 245);
     border: none;
     color: black;
 }
 
+#searchTabs a.active:hover {
+    color: black;
+}
+
+#searchTabs a:hover {
+    border: none;
+    color: rgb(209, 158, 92);
+}
+
 #searchTabs a {
     color: white;
+}
+
+.subscribe-card {
+    border-color: #917691;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(219, 85, 219, 0.5);
+}
+
+.shad {
+    text-shadow:
+    2px 2px 0 #000,
+    2px 3px 0 #000,
+    4px 3px 0 #917691,
+    1px 3px 0 #917691;
+}
+
+.subscribe textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+.searchbar input:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.clone {
+    border: none;
+    background-color: #e6e2e2;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+}
+
+.who, .venue, .xtra-info {
+    line-height: 1em;
+}
+
+.who, .venue {
+    font-size: 1.15em;
+}
+
+.xtra-info {
+    font-size: .9em;
+}
+
+.nav-item {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.clone:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+#copied {
+    display: none;
 }
 

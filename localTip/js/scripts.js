@@ -1,5 +1,4 @@
 $(function() {
-    console.log('TEST');
 
     if ($(window).width() < 574) {
         $(".venue").each(function() {

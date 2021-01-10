@@ -181,9 +181,9 @@ h1, h3, h4 {
     font-style: italic;
 }
 
-.missionContainer {
+/* .missionContainer {
     margin-bottom: 150px;
-}
+} */
 
 #headsUp {
     color: coral;
@@ -204,6 +204,14 @@ h1, h3, h4 {
 
 #headsUp:hover {
     font-size: 1.03em;
+}
+
+.card {
+    border: 0;
+}
+
+.missionCard {
+    min-height: 405px;
 }
 
 

@@ -1,6 +1,6 @@
 # Local Tip
 
-A responsive, mobile-first design for a music listing website using Bootstrap. Includes a contact & about page. Features include forms, modals, cards, navbar, font icons.
+A responsive, mobile-first design for a concert listing website using Bootstrap. Includes a contact & about page. Features include forms, modals, cards, navbar, font icons.
 
 
 ![screencapture-localhost-3000-2021-06-15-23_01_01](https://user-images.githubusercontent.com/73765884/122153537-37cf8b80-ce31-11eb-9fc8-c99e9f22e265.png)
